@@ -90,6 +90,7 @@ function searchCity() {
 
 let mapOptions = {
     //center: [coordinates[0],coordinates[1]],
+    center: [37.774, -122.431],
     zoom: 10
 }
 
