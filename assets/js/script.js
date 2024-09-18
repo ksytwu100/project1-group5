@@ -121,4 +121,7 @@ function searchAddress () {
 
                 L.marker([latLon]).addTo(map);
 
+            })
+        }
+    })
 }
