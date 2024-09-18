@@ -108,7 +108,7 @@ function searchAddress () {
     var state = $("#placeState");
     var zipCode = $("#placeZip");
 
-    var requestURL = "https://nominatim.openstreetmap.org/ui/search.html?q" + streetNumber + "+" + streetName + "+" + cityName + "%2C" + state + "+" zipCode;
+    var requestURL = "https://nominatim.openstreetmap.org/ui/search.html?q" + streetNumber + "+" + streetName + "+" + cityName + "%2C" + state + "+" + zipCode;
 
     fetch(requestURL).then(function (response) {
         if (response.ok) {
