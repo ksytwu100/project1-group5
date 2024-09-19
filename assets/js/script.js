@@ -1,3 +1,30 @@
+// INPUT FORM 
+const plInput = document.getElementById('plName');
+const stInput = document.getElementById('stAddess');
+const cityInput = document.getElementById('city');
+const zipCodeInput = document.getElementById('zipCode');
+const submitButton = document.getElementById('submit');
+
+SaveButton.addEventListener('click', function(event) {
+  event.preventDefault();
+
+const userData = {
+  plname: plNameInput.value,
+  staddress: stAddressInput.value,
+  city: cityInput.value,
+  zipcode: zipCodeInput 
+}; 
+const place = localStorage.getItem("place") 
+let placeData = JSON.parse(place);
+if (!placeData) {
+  placeData = []
+}
+placeData.push(userData)
+localStorage.setItem("place",JSON.stringify(placeData));
+window.location.href = "./blog.html"
+});
+
+
 // WEATHER
 function convertUnix(data, index) {
     const dateObject = new Date(data.daily[index + 1].dt * 1000);
