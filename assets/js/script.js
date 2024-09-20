@@ -1,5 +1,6 @@
+// INPUT FORM 
 const plInput = document.getElementById('plName');
-const stInput = document.getElementById('stAddress');
+const stInput = document.getElementById('stAddess');
 const cityInput = document.getElementById('city');
 const zipCodeInput = document.getElementById('zipCode');
 const submitButton = document.getElementById('submit');
