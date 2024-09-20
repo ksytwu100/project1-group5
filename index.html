@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
+
 <body>
-  <h1>Test!</h1>
+  <section class="header" id="hdrtext">
+    <h1><strong>California Tour Locations and Weatherboard</strong></h1>
+  </section>
+
+  <section class="contentparent">
+    <div class="cacard">
+      <img src="./assets/images/caMap.png" alt="Project California Map"></img>
+    </div>
+    <div class="usercard">
+      <id="inputForm">
+        <h2> Recommend Visitor's Tour and Weatherboard</h2>
+
+        <label for="plName">Place Name</label>
+        <input type="text" id="plName" name="plName"><br />
+        <label for="stAddress">Street Address</label>
+        <input type="stAddress" id="stAddress" name="stAddress"><br />
+
+        <label for="city">City</label>
+        <input type="city" id="city" name="city"><br />
+
+        <label for="zipCode">Zip Code</label>
+        <input type="zipCode" id="zipCode" name="zipCode"><br />
+
+        <button class="submit" id="submit" type="submit"><strong>Submit</strong></button>
+        </form>
+    </div>
+  </section>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'"
+          class="w3-button w3-display-topright">&times;</span>
+        <h1>All field are required.</h1>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+
 </body>
+
 </html>
