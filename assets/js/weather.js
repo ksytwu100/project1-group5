@@ -39,32 +39,42 @@ function getWeather(data) {
 function getCurrentWeather(data) {
     $(".forecast-panel").addClass("visible");
 
-    $("#currentIcon")[0].src = "http://openweathermap.org/img/wn/" + data.current.weather[0].icon + "@2x.png";
-    $("#temperature")[0].textContent = "Temp: " + data.current.temp.toFixed(1) + " \u2109";
-    $("#wind-speed")[0].textContent = "Wind: " + data.current.wind_speed.toFixed(1) + " MPH";
-    $("#humidity")[0].textContent = "Humidity: " + data.current.humidity + "% ";
+    $("#currentIcon").src = "http://openweathermap.org/img/wn/" + data.current.weather[0].icon + "@2x.png";
+    $("#temperature").textContent = "Temp: " + data.current.temp.toFixed(1) + " \u2109";
+    $("#wind-speed").textContent = "Wind: " + data.current.wind_speed.toFixed(1) + " MPH";
+    $("#humidity").textContent = "Humidity: " + data.current.humidity + "% ";
     
     getWeather(data);
 
 }
 function searchCity() {
-    var cityName = cityCaseClean($("#cityName")[0].value.trim());
-    var requestURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=a53da2335636723c4cc1f08dcc994683";
+    console.log(JSON.parse(localStorage.getItem("place"))[0].city);
+    var city = cityCaseClean(JSON.parse(localStorage.getItem("place"))[0].city);
+    var requestURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=a53da2335636723c4cc1f08dcc994683";
 
     fetch(requestURL).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
 
-                $("#city-name")[0].textContent = cityName + " (" + dayjs().format('M/D/YYYY') + ")";
-
-                $("#city-list").append('<button type="button" class="list-group-item list-group-item-light list-group-item-action city-name">' + cityName);
+                $("#city").textContent = city + " (" + dayjs().format('M/D/YYYY') + ")";
 
                 const lat = data.coord.lat;
                 const lon = data.coord.lon;
 
                 var latLon = lat.toString() + " " + lon.toString();
 
-                localStorage.setItem(cityName, latLon);
+                localStorage.setItem("coord", latLon);
+
+
+                let mapOptions = {
+                    center: [lat, lon],
+                    zoom: 10
+                }
+                
+                let map = new L.map('map', mapOptions);
+                
+                let layer = new L.TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
+                map.addLayer(layer);
 
                 requestURL = "https://api.openweathermap.org/data/3.0/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly&units=imperial&appid=a53da2335636723c4cc1f08dcc994683";
 
@@ -81,3 +91,6 @@ function searchCity() {
 }
     })
 }
+
+searchCity();
+
