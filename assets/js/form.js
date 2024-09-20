@@ -9,8 +9,8 @@ submitButton.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const userData = {
-        plname: plInput.value,
-        staddress: stInput.value,
+        plname: plNameInput.value,
+        staddress: stAddressInput.value,
         city: cityInput.value,
         state: stateInput.value,
         zipcode: zipCodeInput.value
