@@ -5,36 +5,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Page 1</title>
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/css/blog.css" />
-</head>
 </head>
 
 <body>
-  <div class="header">   
-  <h2>CALIFORNIA RECOMMENDED PLACES AND WEATHER BOARD</h2></div>
-  <div class="contentparent">
-    <div class="left-side">  
-      <img src="./assets/images/caMap.png" alt="input of a California Map"></img>  
-    </div>  
-    <div class="right-side">
-      <form id="inputForm">
-        <h2>Recommended Place Name</h2>
+  <section class="header" id="hdrtext">
+    <h1><strong>California Tour Locations and Weatherboard</strong></h1>
+  </section>
+
+  <section class="contentparent">
+    <div class="cacard">
+      <img src="./assets/images/caMap.png" alt="Project California Map"></img>
+    </div>
+    <div class="usercard">
+      <id="inputForm">
+        <h2> Recommend Visitor's Tour and Weatherboard</h2>
+
         <label for="plName">Place Name</label>
-        <input type="text" id="plName" name="plName">
+        <input type="text" id="plName" name="plName"><br />
         <label for="stAddress">Street Address</label>
-        <input type="stAddress" id="stAddress" name="stAddress">
+        <input type="stAddress" id="stAddress" name="stAddress"><br />
+
         <label for="city">City</label>
-        <input type="city" id="city" name="class">
+        <input type="city" id="city" name="city"><br />
+
         <label for="zipCode">Zip Code</label>
-        <input type="zipCode" id="zipCode" name="zipCode">
-        <p class="errorMessage" id="error"></p>
-        <button id="submit" type="submit"><strong>Submit</strong></button>
-      </form>
+        <input type="zipCode" id="zipCode" name="zipCode"><br />
+
+        <button class="submit" id="submit" type="submit"><strong>Submit</strong></button>
+        </form>
+    </div>
+  </section>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'"
+          class="w3-button w3-display-topright">&times;</span>
+        <h1>All field are required.</h1>
+      </div>
     </div>
   </div>
-  <div id="p1-g5"></div>
 
   <script src="./assets/js/script.js"></script>
 
