@@ -1,15 +1,16 @@
-let mapOptions = {
-    //center: [coordinates[0],coordinates[1]],
-    center: [37.774, -122.431],
-    zoom: 10
-}
+// var coordData = localStorage.getItem("coord");
+// var lat = coordData.split(" ")[0];
+// var lon = coordData.split(" ")[1];
 
-let map = new L.map('map', mapOptions);
+// let mapOptions = {
+//     center: [lat, lon],
+//     zoom: 10
+// }
 
-let layer = new L.TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
-map.addLayer(layer);
+// let map = new L.map('map', mapOptions);
 
-//TO-DO geo lookup from address 
+// let layer = new L.TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
+// map.addLayer(layer);
 
 function searchAddress () {
     var cityName = cityCaseClean($("#cityName")[0].value.trim());
