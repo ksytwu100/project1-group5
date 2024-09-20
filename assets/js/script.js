@@ -1,4 +1,3 @@
-
 const plInput = document.getElementById('plName');
 const stInput = document.getElementById('stAddress');
 const cityInput = document.getElementById('city');
