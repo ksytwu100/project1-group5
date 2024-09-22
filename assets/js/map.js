@@ -38,5 +38,5 @@ function searchAddress () {
 }
 
 document.getElementById('backButton').addEventListener('click', function() {
-  window.history.back();
+ window.location.href = "./index.html"
 });
