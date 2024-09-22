@@ -11,50 +11,52 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
-<body>
-  <section class="header" id="hdrtext">
+<body></body>
+<section>
+  <div class="header" id="hdrtext">
+    <img src="./assets/images/usaflag.png" alt="Project Flag of The United States of America" class="usaflag"></img>
     <h1><strong>The United States of America Travel Map Locations and Weather Dashboard</strong></h1>
-  </section>
+  </div>
+</section>
 
-  <section class="contentparent">
-    <div class="cacard">
-      <img src="./assets/images/usamap.jpg" alt="Project Map of the United States of America"></img>
-    </div>
-    <div class="usercard">
-      <id="inputForm">
-        <h1> Recommend Visitor's Tour Locations and Weatherboard</h1>
+<section class="contentparent">
+  <div class="cacard">
+    <img src="./assets/images/usamap.jpg" alt="Project Map of The United States of America"></img>
+  </div>
+  <div class="usercard">
+    <id="inputForm">
+      <h1><strong>Recommend Travel Places</strong></h1><br />
+      <label for="plName">Place Name</label>
+      <input type="text" id="plName" name="plName"><br />
+      <label for="stAddress">Street Address</label>
+      <input type="stAddress" id="stAddress" name="stAddress"><br />
 
-        <label for="plName">Place Name</label>
-        <input type="text" id="plName" name="plName"><br />
-        <label for="stAddress">Street Address</label>
-        <input type="stAddress" id="stAddress" name="stAddress"><br />
+      <label for="city">City</label>
+      <input type="city" id="city" name="city"><br />
 
-        <label for="city">City</label>
-        <input type="city" id="city" name="city"><br />
+      <label for="zipCode">Zip Code</label>
+      <input type="zipCode" id="zipCode" name="zipCode"><br />
 
-        <label for="zipCode">Zip Code</label>
-        <input type="zipCode" id="zipCode" name="zipCode"><br />
-
-        <button type="submit" class="submit" id="submit" type="submit"><strong>Submit</strong></button>
-        </form>
-    </div>
-  </section>
-
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content">
-      <div class="w3-container">
-        <span onclick="document.getElementById('id01').style.display='none'"
-          class="w3-button w3-display-topright">&times;</span>
-        <h1>All field are required.</h1>
-      </div>
+      <button class="submit" id="submit" type="submit"><strong>Submit</strong></button>
+      </form>
+  </div>
+</section>
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+      <h1>All field are required.</h1>
     </div>
   </div>
+</div>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
   integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-  <script src="./assets/js/form.js"></script>
-  <!-- <script src="./assets/js/weather.js"></script> -->
+
+<script src="./assets/js/form.js"></script>
+<script src="./assets/js/weather.js"></script>
 
 </body>
 
