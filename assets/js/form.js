@@ -1,6 +1,7 @@
 const plInput = document.getElementById('plName');
 const stInput = document.getElementById('stAddress');
 const cityInput = document.getElementById('city');
+const stateInput = document.getElementById('state');
 const zipCodeInput = document.getElementById('zipCode');
 const submitButton = document.getElementById('submit');
 
@@ -11,6 +12,7 @@ submitButton.addEventListener('click', function(event) {
         plname: plInput.value,
         staddress: stInput.value,
         city: cityInput.value,
+        state: stateInput.value,
         zipcode: zipCodeInput.value
     };
 

@@ -66,15 +66,15 @@ function searchCity() {
                 localStorage.setItem("coord", latLon);
 
 
-                let mapOptions = {
-                    center: [lat, lon],
-                    zoom: 10
-                }
+                // let mapOptions = {
+                //     center: [lat, lon],
+                //     zoom: 10
+                // }
                 
-                let map = new L.map('map', mapOptions);
+                // let map = new L.map('map', mapOptions);
                 
-                let layer = new L.TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
-                map.addLayer(layer);
+                // let layer = new L.TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
+                // map.addLayer(layer);
 
                 requestURL = "https://api.openweathermap.org/data/3.0/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly&units=imperial&appid=a53da2335636723c4cc1f08dcc994683";
 
@@ -92,5 +92,50 @@ function searchCity() {
     })
 }
 
-searchCity();
+function searchAddress () {
+    console.log(JSON.parse(localStorage.getItem("place"))[0].staddress);
+    console.log((JSON.parse(localStorage.getItem("place"))[0].staddress).replace(/ /g,"+"));
+    console.log(JSON.parse(localStorage.getItem("place"))[0].city);
+    console.log(JSON.parse(localStorage.getItem("place"))[0].state);
+    console.log(JSON.parse(localStorage.getItem("place"))[0].zipcode);
+    var cityLocal = (cityCaseClean(JSON.parse(localStorage.getItem("place"))[0].city)).replace(/ /g,"+");
+    var streetLocal = (JSON.parse(localStorage.getItem("place"))[0].staddress).replace(/ /g,"+");
+    var stateLocal = JSON.parse(localStorage.getItem("place"))[0].state;
+    var zipLocal = JSON.parse(localStorage.getItem("place"))[0].zipcode;
 
+    var requestGeoURL = "https://nominatim.openstreetmap.org/search.php?q=" + streetLocal + "+" + cityLocal + "%2C" + stateLocal + "+" + zipLocal + "&format=jsonv2";
+
+    fetch(requestGeoURL).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (dataLocal) {
+
+                const latLocal = dataLocal[0].lat;
+                const lonLocal = dataLocal[0].lon;
+                const typeLocal = dataLocal[0].type;
+
+                var latLonLocal = latLocal.toString() + " " + lonLocal.toString();
+
+                localStorage.setItem("coordLocal", latLonLocal);
+
+                let mapOptions = {
+                    center: [latLocal, lonLocal],
+                    zoom: 10
+                }
+                
+                let map = new L.map('map', mapOptions);
+                
+                let layer = new L.TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
+                map.addLayer(layer);
+
+                var tooltip = L.tooltip(permanent=true)
+                    .setLatLng([latLocal, lonLocal])
+                    .setContent('Hello World!')
+                    .addTo(map);
+
+            })
+        }
+    })
+}
+
+searchCity();
+searchAddress();
