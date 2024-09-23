@@ -127,10 +127,16 @@ function searchAddress () {
                 let layer = new L.TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
                 map.addLayer(layer);
 
-                var tooltip = L.tooltip(permanent=true)
-                    .setLatLng([latLocal, lonLocal])
-                    .setContent('Hello World!')
-                    .addTo(map);
+                var tooltip = L.tooltip({
+                    direction: 'center',
+                    permanent: true,
+                    noWrap: true,
+                    opacity: 0.9
+                });
+
+                tooltip.setContent( "Hello World!");
+                tooltip.setLatLng([latLocal, lonLocal]);
+                tooltip.addTo(map);
 
             })
         }
