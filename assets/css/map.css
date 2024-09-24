@@ -26,12 +26,8 @@
 .forecast-panel img {
   width: 100px;
   height: 100px;
-  /* margin-bottom: 5px; */
 }
 
-/* .forecast-panel .card-header h5 {
-  margin-bottom: 5px;
-} */
 
 .forecast-panel .card-text {
   margin: 5px 0;
