@@ -124,7 +124,7 @@ function searchAddress () {
                     opacity: 0.9
                 });
 
-                tooltip.setContent( "Hello World!");
+                tooltip.setContent( "Hello World! This address is a " + typeLocal + ".");
                 tooltip.setLatLng([latLocal, lonLocal]);
                 tooltip.addTo(map);
             })
