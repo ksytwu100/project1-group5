@@ -24,7 +24,6 @@ if (!placeData) {
 
 placeData.push(userData)
 localStorage.setItem("place", JSON.stringify(placeData));
-// console.log(plInput.value);
 if(plInput.value !== "" && stInput.value !== "" && cityInput.value !== "" && stateInput.value !== "" && zipCodeInput !== "") {
   window.location.href = "./map.html";
 } else {
