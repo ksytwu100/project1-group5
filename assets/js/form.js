@@ -24,5 +24,11 @@ if (!placeData) {
 
 placeData.push(userData)
 localStorage.setItem("place", JSON.stringify(placeData));
-window.location.href = "./map.html"
+// console.log(plInput.value);
+if(plInput.value !== "" && stInput.value !== "" && cityInput.value !== "" && stateInput.value !== "" && zipCodeInput !== "") {
+  window.location.href = "./map.html";
+} else {
+  document.getElementById('id01').style.display='block';
+}
+
 });
