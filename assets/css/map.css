@@ -36,3 +36,18 @@
 .forecast-panel .card-text {
   margin: 5px 0;
 }
+
+main {
+  background-color: #87ceeb;
+  font-family: Arial, sans-serif;
+
+  .title-header {
+    background-color: #ffff;
+    padding: 25px;
+    width: 100%;
+
+    .title-header-text {
+      color: #87ceeb;
+    }
+  }
+}
