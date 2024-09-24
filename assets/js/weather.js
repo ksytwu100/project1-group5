@@ -109,7 +109,7 @@ function searchAddress () {
 
                 let mapOptions = {
                     center: [latLocal, lonLocal],
-                    zoom: 10
+                    zoom: 16
                 }
                 
                 let map = new L.map('map', mapOptions);
