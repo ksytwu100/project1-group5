@@ -1,0 +1,38 @@
+#map {
+  width: 100%;
+  height: 100vh;
+} 
+
+.forecast-panel .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.forecast-panel .col {
+  flex: 1;
+  margin: 10px;
+}
+
+.forecast-panel .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.forecast-panel img {
+  width: 100px;
+  height: 100px;
+  /* margin-bottom: 5px; */
+}
+
+/* .forecast-panel .card-header h5 {
+  margin-bottom: 5px;
+} */
+
+.forecast-panel .card-text {
+  margin: 5px 0;
+}
