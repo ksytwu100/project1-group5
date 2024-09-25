@@ -66,16 +66,6 @@ function searchCity() {
                 localStorage.setItem("coord", latLon);
 
 
-                // let mapOptions = {
-                //     center: [lat, lon],
-                //     zoom: 10
-                // }
-                
-                // let map = new L.map('map', mapOptions);
-                
-                // let layer = new L.TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
-                // map.addLayer(layer);
-
                 requestURL = "https://api.openweathermap.org/data/3.0/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly&units=imperial&appid=a53da2335636723c4cc1f08dcc994683";
 
                 fetch(requestURL).then(function (newResponse) {
@@ -137,7 +127,6 @@ function searchAddress () {
                 tooltip.setContent( "Hello World!");
                 tooltip.setLatLng([latLocal, lonLocal]);
                 tooltip.addTo(map);
-
             })
         }
     })
