@@ -25,7 +25,7 @@ THEN I am presented with a map contaning a marker designating the exact location
 
 ![Screenshot of rendered map](./assets/images/rendered-map.png)
 
-![Screenshot of rendered weather forecast](./assets/rendered-weather-forecast.png)
+![Screenshot of rendered weather forecast](./assets/images/rendered-weather-forecast.png)
 
 ## Link to Deployed Application
 This application is deployed to [GitHub Pages](https://dawsofd.github.io/project1-group5)
