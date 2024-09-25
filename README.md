@@ -15,8 +15,10 @@ SO THAT I can plan a trip inspired by classmate recommendations or individual in
 
 ```
 GIVEN a travel planner map and weather dashboard landing page with form inputs
-WHEN I input the address for a place of interest
-THEN I am presented with a map contaning a marker designating the exact location and category of that address alongside a 5-day future weather forecast for that location
+WHEN I input the address for a place of interest in the United States
+THEN I am presented with a city-level map contaning a marker designating the exact location and category of that address alongside a 5-day future weather forecast for that location
+WHEN I input no or an incomplete address 
+THEN I am presented with a modal prompting me to submit a complete address
 
 ```
 
