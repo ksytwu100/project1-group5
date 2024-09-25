@@ -11,43 +11,37 @@
 <body>
 
   <main class="section">
-    <section class="container">
-      <section class="columns is-vcentered">
-        <div class="column title-header">
-          <h1 class="title is-3 title-header-text">Travel Dashboard</h1>
-        </div>
-      </section>
-
-      <header>
-        <section class="container">
+    
+      <header class="box title-header">
+        <section class="container title-header-inner">
           <section class="columns is-vcentered">
             <div class="column">
-              <h1 class="title is-3">Travel Dashboard</h1>
+              <h1 class="title is-3 title-header-text">🛩️ Travel Dashboard</h1>
+            </div>
+            <div class="button">
+              <button id="backButton">⏎ Back</button>
             </div>
           </section>
-          <div class="button">
-            <button id="backButton" class="button is-light">Back</button>
-          </div>
         </section>
       </header>
 
-      <section class="box">
-        <h2 class="title is-5">Map</h2>
+      <section class="box new-box">
+        <h2 class="title is-5 new-box-text">Map of <div id="city"></div></h2>
         <h2 id="city"></h2>
         <div id="map"></div>
       </section>
 
-      <section class="box">
-        <h2 class="title is-5">5-Day Weather Forecast</h2>
+      <section class="box new-box">
+        <h2 class="title is-5 new-box-text">5-Day Weather Forecast</h2>
         <div class="forecast-panel">
           <div class="container">
               <div class="row">
                   <div class="col">
                       <div class="card">
-                          <div class="card-header bg-dark">
+                          <div class="card-header ">
                               <h5 id="day-0"></h5>
                           </div>
-                          <div class="card-body bg-dark">
+                          <div class="card-body ">
                               <img src="" id="img-0">
                               <p class="card-text" id="temp-0"></p>
                               <p class="card-text" id="hum-0"></p>
@@ -57,10 +51,10 @@
                   </div>
                   <div class="col">
                       <div class="card">
-                          <div class="card-header bg-dark">
+                          <div class="card-header ">
                               <h5 id="day-1"></h5>
                           </div>
-                          <div class="card-body bg-dark">
+                          <div class="card-body ">
                               <img src="" id="img-1">
                               <p class="card-text" id="temp-1"></p>
                               <p class="card-text" id="hum-1"></p>
@@ -70,10 +64,10 @@
                   </div>
                   <div class="col">
                       <div class="card">
-                          <div class="card-header bg-dark">
+                          <div class="card-header">
                               <h5 id="day-2"></h5>
                           </div>
-                          <div class="card-body bg-dark">
+                          <div class="card-body ">
                               <img src="" id="img-2">
                               <p class="card-text" id="temp-2"></p>
                               <p class="card-text" id="hum-2"></p>
@@ -83,10 +77,10 @@
                   </div>
                   <div class="col">
                       <div class="card">
-                          <div class="card-header bg-dark">
+                          <div class="card-header ">
                               <h5 id="day-3"></h5>
                           </div>
-                          <div class="card-body bg-dark">
+                          <div class="card-body ">
                               <img src="" id="img-3">
                               <p class="card-text" id="temp-3"></p>
                               <p class="card-text" id="hum-3"></p>
@@ -96,10 +90,10 @@
                   </div>
                   <div class="col">
                       <div class="card">
-                          <div class="card-header bg-dark">
+                          <div class="card-header ">
                               <h5 id="day-4"></h5>
                           </div>
-                          <div class="card-body bg-dark">
+                          <div class="card-body ">
                               <img src="" id="img-4">
                               <p class="card-text" id="temp-4"></p>
                               <p class="card-text" id="hum-4"></p>
@@ -111,7 +105,7 @@
           </div>
         </section>
       </section>
-    </section>
+    
   </main>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>

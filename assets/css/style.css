@@ -87,6 +87,11 @@ textarea {
   font-size: 15px;
   margin-bottom: 8px;
 }
+
+#state {
+  width: 589px;
+}
+
 button {
   width: 97%;
   border-spacing: 0px, 35px;

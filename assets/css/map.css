@@ -1,6 +1,6 @@
 #map {
   width: 100%;
-  height: 100vh;
+  height: 75vh;
 } 
 
 .forecast-panel .row {
@@ -21,6 +21,8 @@
   align-items: center;
   padding: 20px;
   text-align: center;
+  background-color: white;
+  color: black;
 }
 
 .forecast-panel img {
@@ -33,17 +35,40 @@
   margin: 5px 0;
 }
 
+
 main {
-  background-color: #87ceeb;
+  background-color: #ffff;
   font-family: Arial, sans-serif;
 
   .title-header {
-    background-color: #ffff;
+    background-color: #D3f3fe;
     padding: 25px;
     width: 100%;
+    margin-bottom: 20px;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+
+    .title-header-inner {
+      background-color: #D3f3fe;
+    }
 
     .title-header-text {
-      color: #87ceeb;
+      color: black;
     }
+  }
+}
+
+.new-box {
+  background-color: #D3f3fe;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  border-left: solid 2px black;
+  border-right: solid 2px black;
+
+  .new-box-text {
+    color: black;
+    text-align: center;
   }
 }

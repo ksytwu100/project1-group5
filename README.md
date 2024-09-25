@@ -5,24 +5,29 @@ UCB-VIRT-FSF-PT-07-2024-U-LOLC Poject 1
 
 ```
 AS A traveler / coding bootcamp classmate 
-I WANT to see a list of classmate recommendations for sites of interest in each of the cities people reside displayed on a map alongside the weather forecasts for each place.  
-SO THAT I can plan a trip based on classmate recommendations and weather conditions.  
+I WANT to see a map and location description displayed for a site of interest alongside a 5 day weather forecast. 
+SO THAT I can plan a trip inspired by classmate recommendations or individual interest based on local weather conditions.  
+ 
 
 ```
 
 ## Acceptance Criteria 
 
 ```
-GIVEN a recommended places and weather dashboard with form inputs
-WHEN I click ‘add recommendation’
-THEN I am presented with a modal that asks for the name, address, category, and description for a place of interest to add to the places of interest database and that city is added to the search history
-WHEN I search for a city 
-THEN I am presented with a map with pins demoting the locations of previously recommended places of interest alongside a 5-day weather forecast with current and future conditions for that city 
-WHEN I click on a city in the search history 
-THEN I am again presented with the current and future conditions for that city
+GIVEN a travel planner map and weather dashboard landing page with form inputs
+WHEN I input the address for a place of interest in the United States
+THEN I am presented with a city-level map contaning a marker designating the exact location and category of that address alongside a 5-day future weather forecast for that location
+WHEN I input no or an incomplete address 
+THEN I am presented with a modal prompting me to submit a complete address
 
 ```
 
 ## Mock-Up
+![Screenshot of landing page](./assets/images/landing-page-form.png)
+
+![Screenshot of rendered map](./assets/images/rendered-map.png)
+
+![Screenshot of rendered weather forecast](./assets/images/rendered-weather-forecast.png)
 
 ## Link to Deployed Application
+This application is deployed to [GitHub Pages](https://dawsofd.github.io/project1-group5)

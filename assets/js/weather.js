@@ -109,7 +109,7 @@ function searchAddress () {
 
                 let mapOptions = {
                     center: [latLocal, lonLocal],
-                    zoom: 10
+                    zoom: 16
                 }
                 
                 let map = new L.map('map', mapOptions);
@@ -124,7 +124,7 @@ function searchAddress () {
                     opacity: 0.9
                 });
 
-                tooltip.setContent( "Hello World!");
+                tooltip.setContent( "Hello World! This address is a " + typeLocal + ".");
                 tooltip.setLatLng([latLocal, lonLocal]);
                 tooltip.addTo(map);
             })
