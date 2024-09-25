@@ -24,7 +24,6 @@ function getWeather(data) {
         }
 
         var currentSelector = "#day-" + i;
-        $(currentSelector)[0].textContent = weatherForecast.date;
         currentSelector = "#img-" + i;
         $(currentSelector)[0].src = weatherForecast.icon;
         currentSelector = "#temp-" + i;
