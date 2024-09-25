@@ -89,7 +89,10 @@ textarea {
 }
 
 #state {
-  width: 589px;
+  width: 97%;
+  height: 36px;
+  padding: 5px;
+  margin-bottom: 8px;
 }
 
 button {
