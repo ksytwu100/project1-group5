@@ -31,15 +31,12 @@ THEN I am presented with a modal prompting me to submit a complete address
 
 ## Link to Deployed Application
 
-This application is deployed to [GitHub Pages](https://dawsofd.github.io/project1-group5)
 
 Link to deployed application:
 
-https://dawsofd.github.io/project1-group5/Links to an external site.
 
 Link to github repo:
 
-https://github.com/dawsofd/project1-group5Links to an external site./
 
 Link to project presentation:
 
