@@ -30,4 +30,24 @@ THEN I am presented with a modal prompting me to submit a complete address
 ![Screenshot of rendered weather forecast](./assets/images/rendered-weather-forecast.png)
 
 ## Link to Deployed Application
+
 This application is deployed to [GitHub Pages](https://dawsofd.github.io/project1-group5)
+
+Link to deployed application:
+
+https://dawsofd.github.io/project1-group5/Links to an external site.
+
+Link to github repo:
+
+https://github.com/dawsofd/project1-group5Links to an external site./
+
+Link to project presentation:
+
+https://docs.google.com/presentation/d/1iK57jvJxagEz1kN-WoV2y914VwylrTyqR3v11WX1SI4/edit?usp=sharingLinks to an external site.
+
+
+
+
+
+
+
