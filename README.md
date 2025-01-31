@@ -36,7 +36,7 @@ Link to deployed application:
 
 
 Link to github repo:
-
+https://github.com/ksytwu100/project1-group5
 
 Link to project presentation:
 
